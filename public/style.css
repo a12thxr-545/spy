@@ -1,0 +1,120 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e; /* สีพื้นหลังแนวดาร์ก/อวกาศ */
+    color: #e0e0e0; /* สีตัวอักษร */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* กล่องหลักของเกม */
+.container {
+    background-color: #16213e; /* สีพื้นหลังกล่อง */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid #0f3460;
+}
+
+h1 {
+    color: #e94560; /* สีแดงอมชมพู */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #53cde2; /* สีฟ้าสว่าง */
+    margin-bottom: 15px;
+}
+
+/* ซ่อนหน้าจอทั้งหมดไว้ก่อน */
+.screen {
+    display: none;
+}
+
+/* แสดงเฉพาะหน้าจอที่ 'active' */
+.screen.active {
+    display: block;
+}
+
+/* สไตล์ปุ่ม */
+button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #c03950;
+    transform: translateY(-2px);
+}
+
+/* สไตล์ช่องกรอกข้อมูล */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid #0f3460;
+    background-color: #e0e0e0;
+    color: #16213e;
+    font-size: 16px;
+    text-align: center;
+}
+
+label {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+/* สไตล์ข้อความ Error */
+.error {
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* สไตล์ข้อความแสดงบทบาท/โจทย์ */
+.role {
+    color: #ffdd57; /* สีเหลืองทอง */
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #ffdd57;
+}
+
+.prompt {
+    color: #53cde2; /* สีฟ้าสว่าง */
+    font-size: 2rem;
+    word-wrap: break-word; /* กันข้อความยาวล้นจอ */
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* สไตล์ลิสต์รายชื่อผู้เล่น */
+#player-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#player-list li {
+    background-color: #0f3460;
+    padding: 8px;
+    margin: 5px auto;
+    border-radius: 5px;
+    width: 70%;
+}
