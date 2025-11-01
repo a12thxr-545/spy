@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมสปาย (ออนไลน์)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🕵️‍♂️ SPY GAME (ออนไลน์)</h1>
+
+        <div id="login-screen" class="screen active">
+            <h2>ยินดีต้อนรับ</h2>
+            <label for="name-input">ใส่ชื่อของคุณ:</label>
+            <input type="text" id="name-input" placeholder="ชื่อผู้เล่น">
+            <button id="join-btn">เข้าร่วมเกม</button>
+        </div>
+
+        <div id="lobby-screen" class="screen">
+            <h2>รอผู้เล่น...</h2>
+            <p>ผู้เล่นในห้อง:</p>
+            <ul id="player-list">
+                </ul>
+            <p>(ให้คนแรกที่เข้าห้องเป็นคนกดเริ่ม)</p>
+            <button id="start-game-btn">เริ่มเกม</button>
+            <p id="lobby-error" class="error"></p>
+        </div>
+
+        <div id="role-screen" class="screen">
+            <h2>บทบาทของคุณคือ:</h2>
+            <h1 id="role-display" class="role"></h1>
+            <p id="role-wait-msg"></p> </div>
+
+        <div id="leader-prompt-screen" class="screen">
+            <h2>คุณคือ "หัวหน้า"</h2>
+            <p>กรุณาใส่ "โจทย์"</p>
+            <input type="text" id="prompt-input" placeholder="เช่น สัตว์ในสวนสัตว์">
+            <button id="submit-prompt-btn">ยืนยันโจทย์</button>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <h2>ข้อมูลของคุณ:</h2>
+            <div id="prompt-display-area">
+                <p>โจทย์ในรอบนี้คือ:</p>
+                <h1 id="prompt-display-text" class="prompt"></h1>
+            </div>
+            <div id="spy-prompt-area">
+                <h1 class="role">คุณคือ "สปาย"</h1>
+                <p>คุณจะไม่เห็นโจทย์! พยายามเนียนเข้าไว้ล่ะ!</p>
+            </div>
+            <hr>
+            <h2>เริ่มเกม!</h2>
+            <p>(ตอนนี้ทุกคนเห็นข้อมูลของตัวเองแล้ว ให้เริ่มพูดคุยกันได้เลย)</p>
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client-script.js"></script>
+</body>
+</html>
